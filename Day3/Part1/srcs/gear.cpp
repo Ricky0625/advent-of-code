@@ -87,9 +87,7 @@ int getLineSum(std::vector<std::string> &engineLines, int currentIndex)
             if (number == 0)
                 number = currentLine[i] - '0';
             else
-            {
                 number = number * 10 + (currentLine[i] - '0');
-            }
 
             if (!hasSymbol)
                 hasSymbol = hasSymbolInSurroundings(engineLines, currentIndex, i);
@@ -102,6 +100,9 @@ int getLineSum(std::vector<std::string> &engineLines, int currentIndex)
             hasSymbol = false;
         }
     }
+
+    if (number != 0 && hasSymbol)
+        sum += number;
     return sum;
 }
 

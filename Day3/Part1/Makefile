@@ -1,6 +1,6 @@
 NAME		:= gear
 CXX			:= c++
-CXXFLAGS	:= -Wall -Wextra -Werror -std=c++11 -MMD
+CXXFLAGS	:= -std=c++11 -MMD
 
 ifeq ($(DEBUG), 1)
 	CXXFLAGS += -fsanitize=address -g3
